@@ -1,0 +1,48 @@
+import java.util.Arrays;
+
+class Factory {
+	
+	@Override
+	public String toString() {
+		return "Factory owner: " + this.factoryOwner + "\nGoods produced: " + this.goodsProduced + "\nUnits produced per hour: "
+				+ this.unitsProducedPerHour + "\nYears active: " + this.yearsActive + "\n\n";
+	}
+	String factoryOwner;
+	String goodsProduced;
+	int unitsProducedPerHour;
+	int yearsActive;
+	
+}
+
+public class ClassesAndObjects {
+	
+	public static void main(String[] args) {
+		
+		
+		
+		Factory factory1 = new Factory();
+		factory1.factoryOwner = "Applied Thermodynamics Inc.";
+		factory1.goodsProduced = "Oil & gas parts.";
+		factory1.unitsProducedPerHour = 75;
+		factory1.yearsActive = 22;
+		
+		Factory factory2 = new Factory();
+		factory2.factoryOwner = "Zurppu Technologies";
+		factory2.goodsProduced = "Plastics.";
+		factory2.unitsProducedPerHour = 825;
+		factory2.yearsActive = 6;
+		
+		Factory factory3 = new Factory();
+		factory3.factoryOwner = "TEGA";
+		factory3.goodsProduced = "Textiles.";
+		factory3.unitsProducedPerHour = 1500;
+		factory3.yearsActive = 13;
+		
+		Object[] factories = new Object[3];
+		factories[0] = factory1;
+		factories[1] = factory2;
+		factories[2] = factory3;
+		
+		System.out.println(Arrays.toString(factories));
+	}
+}
